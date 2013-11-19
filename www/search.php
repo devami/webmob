@@ -12,24 +12,26 @@
         <link rel="apple-touch-startup-image" href="img/splash-touch.png">
         <title></title>
     <body>
-        <div class="wrapper">          
-            <a id="header" href="index.html"><img src="img/logo-57.png" />
-                <div class="titre">
-                    <h1>MyBd.fr</h1>
-                    <h2>plein d'infos sur les BD</h2>
-                </div></a>
+       <div class="wrapper" >
+            <header>          
+                <a id="header" href="index.html"><img src="img/logo-57.png"/>
+                    <hgroup>
+                        <h1>MyBd.fr</h1>
+                        <h2>plein d'infos sur les BD</h2>
+                    </hgroup></a>
+            </header>
         </div>
         <br  class="clear"/>
         <div class="wrapper" >
-            <div id="menu">
+           <nav id="menu">               
                 <ul>
                     <li><a href="search.php">Search</a></li>
                     <li><a href="last.php">Last</a></li>
                     <li><a href="legal.php">Legal</a></li>                  
                     <li><a href="random.php">Random</a></li>
                 </ul>
-            </div>
-        </div>
+                    </nav>
+            </div>     
 
         <br  class="clear"/>
         <div class="wrapper" >
@@ -38,7 +40,7 @@
                     <label>Auteur: </label><input type="text" name="Auteur"/><br/>
                     <label>Nationalit&eacute;: </label><input type="text" name="Nationalite" /><br/>
                      <label>Titre: </label><input type="text" name="Titre"/><br/>                    
-                     <label>Ann&eacute;e: </label><input type="text" name="Annee"/><br/>
+                     <label>Ann&eacute;e: </label><input type="range" name="Annee"/><br/>
                     <label>Prix: </label><input type="text" name="Prix" /><br/>
                     <label>Disponibilit&eacute;: </label><input type="text" name="Disponibilite" />
                     <input type="submit" value="Validez" name="validez" />
@@ -46,15 +48,17 @@
             </div>
         </div>
         <br  class="clear"/>
-        <div class="wrapper" >
-            <div id="footer">
-                <ul>
-                    <li><a href="search.php">Search</a></li>
-                    <li><a href="last.php">Last</a></li>
-                    <li><a href="legal.php">Legal</a></li>                  
-                    <li><a href="random.php">Random</a></li>
-                </ul>
-            </div>
+       <div class="wrapper" >
+            <footer>
+                <nav>
+                    <ul>
+                        <li><a href="search.php">Search</a></li>
+                        <li><a href="last.php">Last</a></li>
+                        <li><a href="legal.php">Legal</a></li>                  
+                        <li><a href="random.php">Random</a></li>
+                    </ul>
+                </nav>
+            </footer>
         </div>
         <br  class="clear"/>
 
