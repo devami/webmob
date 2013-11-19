@@ -34,12 +34,15 @@
         <br  class="clear"/>
         <div class="wrapper" >
             <div id="content">
-                <ul>
-                    <li><a href="search.php">Search</a></li>
-                    <li><a href="last.php">Last</a></li>
-                    <li><a href="legal.php">Legal</a></li>                  
-                    <li><a href="random.php">Random</a></li>
-                </ul>
+                <form name="search" action="search.php">
+                    <label>Auteur: </label><input type="text" name="Auteur"/><br/>
+                    <label>Nationalit&eacute;: </label><input type="text" name="Nationalite" /><br/>
+                     <label>Titre: </label><input type="text" name="Titre"/><br/>                    
+                     <label>Ann&eacute;e: </label><input type="text" name="Annee"/><br/>
+                    <label>Prix: </label><input type="text" name="Prix" /><br/>
+                    <label>Disponibilit&eacute;: </label><input type="text" name="Disponibilite" />
+                    <input type="submit" value="Validez" name="validez" />
+                </form>
             </div>
         </div>
         <br  class="clear"/>
