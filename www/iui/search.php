@@ -10,21 +10,9 @@
         <link rel="apple-touch-icon" href="img/logo-72.png"  sizes="72x72"/>
         <link rel="apple-touch-icon" href="img/logo-57.png"  sizes="57x57"/>
         <link rel="apple-touch-startup-image" href="img/splash-touch.png">
-        <script type="text/javascript" src="jss/library.js" >
-
-        </script> 
-        <script type="text/javascript" >
-           
-            function showcoord()
-            {
-                console.log(gps.get());
-                var y = document.getElementById("coords");
-                var coordonne = gps.get();
-                y.innerHTML = coordonne;
-            }
-        </script>   
+        <title></title>
     <body>
-        <div class="wrapper" >
+       <div class="wrapper" >
             <header>          
                 <a id="header" href="index.html"><img src="img/logo-57.png"/>
                     <hgroup>
@@ -35,26 +23,32 @@
         </div>
         <br  class="clear"/>
         <div class="wrapper" >
-            <nav id="menu">               
+           <nav id="menu">               
                 <ul>
                     <li><a href="search.php">Search</a></li>
                     <li><a href="last.php">Last</a></li>
                     <li><a href="legal.php">Legal</a></li>                  
                     <li><a href="random.php">Random</a></li>
                 </ul>
-            </nav>            
-        </div>
+                    </nav>
+            </div>     
 
         <br  class="clear"/>
         <div class="wrapper" >
             <div id="content">
-                <div id="coords"> <input type="button" value="click" onclick="showcoord();" /></div>
-
+                <form name="search" action="search.php">
+                    <label>Auteur: </label><input type="text" name="Auteur"/><br/>
+                    <label>Nationalit&eacute;: </label><input type="text" name="Nationalite" /><br/>
+                     <label>Titre: </label><input type="text" name="Titre"/><br/>                    
+                     <label>Ann&eacute;e: </label><input type="range" name="Annee"/><br/>
+                    <label>Prix: </label><input type="text" name="Prix" /><br/>
+                    <label>Disponibilit&eacute;: </label><input type="text" name="Disponibilite" />
+                    <input type="submit" value="Validez" name="validez" />
+                </form>
             </div>
-           
         </div>
         <br  class="clear"/>
-        <div class="wrapper" >
+       <div class="wrapper" >
             <footer>
                 <nav>
                     <ul>
