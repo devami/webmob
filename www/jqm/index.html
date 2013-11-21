@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <link rel="stylesheet" href="../jss/style-jqm.css" />
+        <link rel="stylesheet" href="../iui/t/default/default-theme.css" />
+        <script type="text/javascript" src="../iui/iuix.js" ></script>
+        <link rel="shortcut icon" href=iui/iui-favicon.png />
+        <link rel="apple-touch-icon" href="../img/logo-114.png"  sizes="114x114"/>
+        <link rel="apple-touch-icon" href="../img/logo-72.png"  sizes="72x72"/>
+        <link rel="apple-touch-icon" href="../img/logo-57.png"  sizes="57x57"/>
+        <link rel="apple-touch-startup-image" href="../iui/iui-startup.jpg">        
+        <script type="text/javascript" src="../jss/library.js" >
+        </script> 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" >
+
+            function showcoord()
+            {
+                console.log(gps.get());
+                var y = document.getElementById("coords");
+                var coordonne = gps.get();
+                y.innerHTML = coordonne;
+            }
+            function submit()
+            {
+              document.recherche.submit();
+            }
+             function reInit()
+            {
+                document.recherche.reset();
+                //document.getElementById("Search").reset();
+            }
+              function memoriser(key,obj)
+            {
+                
+                storage.set(key, obj.value);
+            }
+        </script>   
+        <title></title>
+    <body>
+
+        <div class="toolbar">
+            <h1 id="pageTitle"></h1>
+            <a id="backButton" class="button" href="#"></a>            
+        </div>
+
+        <div id="home" title="myBD.fr" selected="true" >
+            <ul>
+                <li><a href="#Search">Search</a></li>
+                <li><a href="#Last">Last</a></li>
+                <li><a href="#Legal">Legal</a></li>                  
+                <li><a href="#Random">Random</a></li>
+            </ul>
+        </div>
+        <div id="Search" title="Search" class="panel" >
+            <form id="search" title="Recherche"  class="panel" name="recherche"  action="search.php">
+                <fieldset>                   
+                    <div class="row">
+                        <label for="auteur">Auteur</label>
+                        <input type="text" name="Auteur"  placeholder="Nom d'auteur" onchange="memoriser(this.name, this)"/><br/>
+                    </div>
+                    <div class="row">
+                        <label for="Nationalite">Nationalit&eacute;</label>
+                        <input type="text" name="Nationalite" placeholder="Nationalite" onchange="memoriser(this.name,this)" /><br/>
+                    </div>
+                    <div class="row">
+                        <label for="Titre">Titre: </label> 
+                        <input type="text" name="Titre" placeholder="Titre" onchange="memoriser(this.name,this)"/><br/></div>
+                    <div class="row">
+                        <label for="Ann&eacute;e">Ann&eacute;e: </label>
+                        <input type="range" name="Annee"  onchange="memoriser(this.name,this)"/><br/>
+                    </div>
+                    <div class="row">
+                        <label for="Prix">Prix: </label>
+                        <input type="text" name="Prix" placeholder="Prix" onchange="memoriser(this.name,this)" /><br/>
+                    </div>
+                    <div class="row">
+                        <label for="Disponibilit&eacute;">Disponibilit&eacute;: </label>
+                        <input type="text" name="Disponibilite" placeholder="Disponibilite" onchange="memoriser(this)" />
+                        <input type="submit" value="Validez" name="validez" />
+                    </div>
+
+                </fieldset>
+                <a href="javascript:submit()" class="whiteButton">Rechercher</a>
+                <a href="#Search" onclick="reInit()" class="redButton">Annuler</a>
+
+            </form>
+        </div>
+        <div id="Last" title="Last" class="panel">Last</div>
+        <div id="Legal" title="Legal" class="panel">Legal</div>
+        <div id="Random" title="Random" class="panel"> 
+            <div id="coords"> <input type="button" value="click" onclick="showcoord();" /></div>
+        </div>             
+
+
+
+    </body>
+
+</html> 
