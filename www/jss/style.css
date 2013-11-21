@@ -131,3 +131,7 @@ footer li a{
     color:#333
 
 }
+#geomap{
+ height: 350px;
+ width: 600px;
+}

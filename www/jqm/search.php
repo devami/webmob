@@ -10,59 +10,47 @@
         <link rel="apple-touch-icon" href="img/logo-72.png"  sizes="72x72"/>
         <link rel="apple-touch-icon" href="img/logo-57.png"  sizes="57x57"/>
         <link rel="apple-touch-startup-image" href="img/splash-touch.png">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+         <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+          <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+          <script src="http://jquery-ui-map.googlecode.com/svn/trunk/ui/min/jquery.ui.map.full.min.js"></script>
         <title></title>
     <body>
-       <div class="wrapper" >
-            <header>          
-                <a id="header" href="index.html"><img src="img/logo-57.png"/>
-                    <hgroup>
-                        <h1>MyBd.fr</h1>
-                        <h2>plein d'infos sur les BD</h2>
-                    </hgroup></a>
-            </header>
-        </div>
-        <br  class="clear"/>
-        <div class="wrapper" >
-           <nav id="menu">               
-                <ul>
+        <div id="jqm" data-role="page">
+            <div data-role="header"><h1>MyBD.fr</h1></div>
+            <div data-role="content">                
+                <ul data-role="listview">
                     <li><a href="search.php">Search</a></li>
                     <li><a href="last.php">Last</a></li>
                     <li><a href="legal.php">Legal</a></li>                  
                     <li><a href="random.php">Random</a></li>
                 </ul>
-                    </nav>
-            </div>     
-
-        <br  class="clear"/>
-        <div class="wrapper" >
-            <div id="content">
-                <form name="search" action="search.php">
-                    <label>Auteur: </label><input type="text" name="Auteur"/><br/>
-                    <label>Nationalit&eacute;: </label><input type="text" name="Nationalite" /><br/>
-                     <label>Titre: </label><input type="text" name="Titre"/><br/>                    
-                     <label>Ann&eacute;e: </label><input type="range" name="Annee"/><br/>
-                    <label>Prix: </label><input type="text" name="Prix" /><br/>
-                    <label>Disponibilit&eacute;: </label><input type="text" name="Disponibilite" />
-                    <input type="submit" value="Validez" name="validez" />
-                </form>
+                
+                <div id="form" data-role="fieldcontain">            
+                    <label for="Auteur">Auteur: </label><input type="text" name="Auteur" id="Auteur" placeholder="Auteur"/><br/>
+                    <label for="Nationalit&eacute;">Nationalit&eacute;: </label><input type="text" name="Nationalite"  placeholder="Nationalite"/><br/>
+                    <label for="Titre">Titre: </label><input type="text" name="Titre" id="Titre"  placeholder="Titre"/><br/>                    
+                    <label for="Ann&eacute;e">Ann&eacute;e: </label><input type="range" name="Annee" id="Annee" /><br/>
+                    <label for="Prix">Prix: </label><input type="text" name="Prix"  id="Prix"  placeholder="Prix"/><br/>
+                    <label for="Disponibilit&eacute;">Disponibilit&eacute;: </label><input type="text" name="Disponibilite" id="Disponibilite"  placeholder="Disponibilite"/>
+                               
             </div>
-        </div>
-        <br  class="clear"/>
-       <div class="wrapper" >
-            <footer>
-                <nav>
+                
+                
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-bar">                         
+            <div data-role="navbar">
                     <ul>
-                        <li><a href="search.php">Search</a></li>
-                        <li><a href="last.php">Last</a></li>
-                        <li><a href="legal.php">Legal</a></li>                  
-                        <li><a href="random.php">Random</a></li>
+                        <li><a href="#" data-role="button" data-icon="back" data-theme="a" data-rel="back">Precedent</a>    </li>
+                        <li> <a href="#" data-role="button"  data-icon="search" data-theme="b">Rechercher</a></li>
                     </ul>
-                </nav>
-            </footer>
+                </div><!-- /navbar -->
+            </div>            
         </div>
-        <br  class="clear"/>
-
-
+        <br  class="clear"/>   
+         
     </body>
 
 </html> 

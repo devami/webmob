@@ -10,6 +10,9 @@
         <link rel="apple-touch-icon" href="img/logo-72.png"  sizes="72x72"/>
         <link rel="apple-touch-icon" href="img/logo-57.png"  sizes="57x57"/>
         <link rel="apple-touch-startup-image" href="img/splash-touch.png">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
         <title></title>
     <body>
         <div class="wrapper">          
