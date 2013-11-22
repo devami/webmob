@@ -12,30 +12,81 @@
         <link rel="apple-touch-icon" href="../img/logo-72.png"  sizes="72x72"/>
         <link rel="apple-touch-icon" href="../img/logo-57.png"  sizes="57x57"/>
         <link rel="apple-touch-startup-image" href="../iui/iui-startup.jpg">        
-   
+
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-         
+        <script type="text/javascript">
+
+            function chargerListeBd()
+            {                
+                $.ajax({
+                    url: "bd.json",
+                    //method: "POST",
+                    success: function(result)
+                    {
+                        if (result && result.success)
+                        {
+                            htmlfrag = $($(".bdrow")[0]);
+                            tbody = htmlfrag.parent();
+                            $(result.data).each(function(i, item)
+                            {
+                                var html = htmlfrag.clone();
+                                $(".bdrow-titre", html).text(item.nom)
+                                $(".bdrow-auteur", html).text(item.illustrateur)
+                                tbody.append(html);
+                            });
+                            htmlfrag.remove();
+                        }
+                        else
+                        {
+                        }
+
+                    }
+
+                });
+            }
+            $(function() {
+                chargerListeBd();
+            })
+
+        </script>
         <title></title>
     <body>
 
         <div id="jqm" data-role="page">
             <div data-role="header"><h1>MyBD.fr</h1></div>
             <div data-role="content">
-                <ul data-role="listview">
+
+                <ul data-role="listview" data-inset="true">
                     <li><a href="search.php">Search</a></li>
                     <li><a href="last.php">Last</a></li>
                     <li><a href="legal.php">Legal</a></li>                  
                     <li><a href="random.php">Random</a></li>
                 </ul>
-                 
+                <table width="100%" >
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Auteur</th>
+                        </tr>
+                    </thead>
+                    <tbody>                      
+                        <tr class="bdrow">
+                            <td class="bdrow-titre">titre</td>
+                            <td class="bdrow-auteur">Auteur</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
             </div>
             <div data-role="footer" data-position="fixed">  
             </div>            
         </div>    
-       
-                
+
+
 
 
 

@@ -41,16 +41,20 @@
                     position: new google.maps.LatLng(44.5403, -78.5463),
                     map: map
                 });
-                
-             google.maps.event.addListener(marker, 'click', function() {
-    map.setZoom(8);
-    map.setCenter(marker.getPosition());
-  });
+                marker.setMap(map);
+                var infowindow = new google.maps.InfoWindow({
+                    content: "Vous etes sur la ville x!"
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map, marker);
+                    map.setZoom(9);
+                    map.setCenter(marker.getPosition());
+                });
 
             }
-           
 
- google.maps.event.addDomListener(window, 'load', initialize);
+
+            google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <title></title>
     <body>
