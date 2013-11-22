@@ -1,0 +1,94 @@
+{
+    "name": "devMob",
+    "settings": {
+        "sdkPath": "C:/touch-2.2.0",
+        "urlPrefix": "",
+        "exportPath": "C:/Users/stage/Documents/NetBeansProjects/webmob/www/Sencha",
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1039,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "b850f5fd-f602-445a-af84-f213eaf2971f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "1b5fa673-011d-4a95-bddc-fe241f5b559c": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
+        },
+        "5bcbf5d9-8f5a-45f7-a4db-5e861bbde1f5": {
+            "paths": [
+                "metadata/view/MyTabPanel",
+                "app/view/override/MyTabPanel.js",
+                "app/view/MyTabPanel.js"
+            ],
+            "className": "MyTabPanel"
+        },
+        "37ae6f84-1a0c-4625-ad39-80c694a413b0": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
+        },
+        "204efbaa-6ae7-4312-8be7-81b4a0cfe217": {
+            "paths": [
+                "metadata/store/BdStore",
+                "app/store/override/BdStore.js",
+                "app/store/BdStore.js"
+            ],
+            "className": "BdStore"
+        },
+        "af2bbbc0-09ec-4039-8faa-72b9b69b2819": {
+            "paths": [
+                "metadata/model/Bd",
+                "app/model/override/Bd.js",
+                "app/model/Bd.js"
+            ],
+            "className": "Bd"
+        },
+        "b904b813-7bc9-4633-a770-a0738a16290e": {
+            "paths": [
+                "metadata/controller/Main",
+                "app/controller/override/Main.js",
+                "app/controller/Main.js"
+            ],
+            "className": "Main"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "5bcbf5d9-8f5a-45f7-a4db-5e861bbde1f5"
+        ],
+        "store": [
+            "204efbaa-6ae7-4312-8be7-81b4a0cfe217"
+        ],
+        "controller": [
+            "b904b813-7bc9-4633-a770-a0738a16290e"
+        ],
+        "model": [
+            "af2bbbc0-09ec-4039-8faa-72b9b69b2819"
+        ],
+        "resource": [
+            "b850f5fd-f602-445a-af84-f213eaf2971f",
+            "1b5fa673-011d-4a95-bddc-fe241f5b559c",
+            "37ae6f84-1a0c-4625-ad39-80c694a413b0"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

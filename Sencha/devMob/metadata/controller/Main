@@ -1,0 +1,84 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Bd"
+        ],
+        "stores": [
+            "BdStore"
+        ],
+        "designer|userClassName": "Main"
+    },
+    "designerId": "b904b813-7bc9-4633-a770-a0738a16290e",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "console.log(\"Lancement 2 application\");"
+                ]
+            },
+            "designerId": "a8f7364c-d509-4782-b5a2-1dd5dffa2eb7"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "console.log(this.getListe());"
+                ]
+            },
+            "designerId": "64befd77-9119-4646-9ab1-b13e39f6761b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "Liste",
+                "selector": "#ListId"
+            },
+            "designerId": "42747e1f-382c-4695-8d77-e88d2b3e77b5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "console.log(\"click list item\");"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#ListId"
+            },
+            "designerId": "fc77cea9-41e6-47de-9c64-1539188dc2bc"
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyTabPanel",
+        "designer|initialView": true
+    },
+    "designerId": "5bcbf5d9-8f5a-45f7-a4db-5e861bbde1f5",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "accueil",
+                "iconCls": "home",
+                "html": "<h1>accueil</h1>",
+                "styleHtmlContent": true
+            },
+            "designerId": "24c68f93-07c3-413d-9c10-f241161b9d9c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "cart",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.carousel.Carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "caroussel",
+                "iconCls": "compose",
+                "html": "",
+                "styleHtmlContent": true,
+                "direction": "vertical"
+            },
+            "designerId": "41412aa5-6a21-463a-b0d3-5e07f5d75504",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "cart",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "div2",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "02adc1cb-daee-481e-b56b-15e78735a9b4"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "div1",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "0ae078c8-0f47-460f-b36e-0d20d167f8fc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "List",
+                "iconCls": "organize",
+                "html": "",
+                "id": "ListId",
+                "itemId": "ListId",
+                "styleHtmlContent": true,
+                "store": "BdStore"
+            },
+            "designerId": "920d3b22-5d7d-4824-9b72-f04e4562e5a9",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "cart",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<b>{id}</b> <b>{nom}</b>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "eef969ea-c64e-47b4-aca3-75a9550580b9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Map",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "carte",
+                "badgeText": "jj",
+                "iconCls": "maps",
+                "html": "<h1>essai<h1>",
+                "styleHtmlContent": true,
+                "useCurrentLocation": true
+            },
+            "designerId": "4b389317-b6d7-4619-9841-c28ae31b1bcd"
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "ui": "light"
+            },
+            "designerId": "efbc16a4-2278-4e0a-9f29-bb9881a84868"
+        }
+    ]
+}
