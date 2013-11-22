@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Liste des bd",
+    "data": [
+        {"id": 1, "nom": "lucky luke", "ilustrateur": "gosciny"},
+        {"id": 2, "nom": "Aterix", "ilustrateur": "herge"}
+    ]
+
+}

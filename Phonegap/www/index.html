@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <link rel="stylesheet" href="jss/style-jqm.css" />
+        <link rel="stylesheet" href="jss/jquery.mobile-1.3.2.min.css" />
+        <script src="jss/jquery-1.10.2.min.js"></script>
+        <script src="jss/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript">
+
+            function chargerListeBd()
+            {
+                $.ajax({
+                    url: "bd.json",
+                    //method: "POST",
+                    success: function(result)
+                    {
+                        if (result && result.success)
+                        {
+                            htmlfrag = $($(".bdrow")[0]);
+                            tbody = htmlfrag.parent();
+                            $(result.data).each(function(i, item)
+                            {
+                                var html = htmlfrag.clone();
+                                $(".bdrow-titre", html).text(item.nom)
+                                $(".bdrow-auteur", html).text(item.illustrateur)
+                                tbody.append(html);
+                            });
+                            htmlfrag.remove();
+                        }
+                        else
+                        {
+                        }
+
+                    }
+
+                });
+            }
+            $(function() {
+                chargerListeBd();
+            })
+
+        </script>
+        <title></title>
+    <body>
+
+        <div id="jqm" data-role="page">
+            <div data-role="header"><h1>MyBD.fr</h1></div>
+            <div data-role="content">
+
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="search.htm">Search</a></li>
+                    <li><a href="last.htm">Last</a></li>
+                    <li><a href="legal.html">Legal</a></li>                  
+                    <li><a href="random.htm">Random</a></li>
+                </ul>
+                <table width="100%" >
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Auteur</th>
+                        </tr>
+                    </thead>
+                    <tbody>                      
+                        <tr class="bdrow">
+                            <td class="bdrow-titre">titre</td>
+                            <td class="bdrow-auteur">Auteur</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+            <div data-role="footer" data-position="fixed">  
+            </div>            
+        </div>    
+
+
+
+
+
+    </body>
+
+</html> 
